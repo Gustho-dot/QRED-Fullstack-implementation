@@ -1,0 +1,30 @@
+scalar Date
+
+type Company {
+  id: ID!
+  name: String!
+  cards: [Card!]!
+}
+
+type Card {
+  id: ID!
+  remainingSpend: Int!
+  limit: Int!
+  invoiceDueDate: Date!
+  transactions: [Transaction!]!
+  active: Boolean!
+}
+
+type Transaction {
+  id: ID!
+  description: String!
+  amount: Int!
+  createdAt: Date!
+}
+
+type Query {
+  companies: [Company!]!
+  company(id: ID!): Company
+  card(id: ID!): Card
+  cards: [Card!]!
+}
