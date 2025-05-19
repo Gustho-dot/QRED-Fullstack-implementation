@@ -1,0 +1,20 @@
+# TODO: split up queries so we dont overfetch. The whole reason to use GraphQL.
+query GetCompanies {
+  companies {
+    id
+    name
+    cards {
+      id
+      remainingSpend
+      limit
+      invoiceDueDate
+      active
+      transactions {
+        id
+        description
+        amount
+        createdAt
+      }
+    }
+  }
+}
