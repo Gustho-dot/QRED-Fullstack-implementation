@@ -38,15 +38,4 @@ export const resolvers: Resolvers<Context> = {
       });
     },
   },
-  // Optional nested resolvers (can be removed if Prisma handles them correctly)
-  // Company: {
-  //   cards: async (parent, _args, ctx) => {
-  //     return ctx.prisma.company.findUnique({ where: { id: parent.id } }).cards();
-  //   },
-  // },
-  // Card: {
-  //   transactions: async (parent, _args, ctx) => {
-  //     return ctx.prisma.card.findUnique({ where: { id: parent.id } }).transactions();
-  //   },
-  // },
 };
